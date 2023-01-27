@@ -12,7 +12,7 @@ $primary-color: #2254F8;
 $secondary-color: #A7B8FF;
 $text-color: #131A27;
 $background-color: #EAEEFF;
-$warning-color: #D64C4C;
+$warning-color: #E16B6B;
 $successful-color: #80D297;
 
 body {
@@ -63,7 +63,7 @@ li {
     display: none;
 }
 
-.btn__edit-delete {
+.btn__edit-delete, .btn__delete, .btn__update {
     cursor: pointer;
     border-radius: 24px;
     border-color: $primary-color;
@@ -74,6 +74,39 @@ li {
     margin-top: 24px;
     font-family: $font-header;
     font-weight: 700;
+    background-color: $background-color;
+    font-size: 16px;
+}
+
+.btn__delete {
+    cursor: pointer;
+    border-radius: 24px;
+    border-color: $warning-color;
+    border-style: solid;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: $text-color;
+    margin-top: 24px;
+    font-family: $font-header;
+    font-weight: 700;
+    background-color: $warning-color;
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+.btn__update, .btn__submit, .btn__addpuppy {
+    cursor: pointer;
+    border-radius: 24px;
+    border-color: $successful-color;
+    border-style: solid;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: $text-color;
+    margin-top: 24px;
+    font-family: $font-header;
+    font-weight: 700;
+    background-color: $successful-color;
+    font-size: 16px;
 }
 
 @media (min-width: 320px) {
@@ -104,11 +137,20 @@ li {
         font-weight: 400;
     }
 
-    .puppyinfo__breed, .puppyinfo__name {
+    .puppyinfo__breed, .puppyinfo__name, .editpuppy__form, .addpuppy__form {
         padding-bottom: 8px;
     }
 
     .puppyinfo__birthdate {
         padding-bottom: 24px;
+    }
+
+    .editpuppy__input, .addpuppy__input {
+        width: 100%;
+        border-radius: 16px;
+        border-style: solid;
+        border-color: $text-color;
+        height: 32px;
+        padding: 1px 8px;
     }
 }

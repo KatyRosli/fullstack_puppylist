@@ -46,16 +46,17 @@ const AddPuppy: React.FC = () => {
         <div className='addpuppy__form'>
             {submitted ? (
                 <div>
-                    <h4> You have submitted succesfully</h4>
-                    <button className='btn btn-success' onClick={newPuppy}>
+                    <h4 className='addpuppy__innertext'> You have submitted succesfully! Click the button below to add more puppy.</h4>
+                    <button className='btn__addpuppy' onClick={newPuppy}>
                         Add Puppy
                     </button>
                 </div>
             ) : (
             <div>
-                <div>
+                <div className='addpuppy__form'>
                     <p className='addpuppy__instruction'> Please fill in all of the inputs to add puppy data.</p>
-                    <label className='addpuppy__label' htmlFor='Breed'>Breed:</label>
+                    <label className='addpuppy__label' htmlFor='Breed'>Breed</label>
+                    <br/>
                     <input
                         type='text'
                         className='addpuppy__input'
@@ -65,8 +66,9 @@ const AddPuppy: React.FC = () => {
                         name='breed'
                     />
             </div>
-            <div>
-                <label className='addpuppy__label' htmlFor='name'>Name:</label>
+            <div className='addpuppy__form'>
+                <label className='addpuppy__label' htmlFor='name'>Name</label>
+                <br/>
                 <input
                 type='text'
                 className='addpuppy__input'
@@ -76,8 +78,9 @@ const AddPuppy: React.FC = () => {
                 name='name'
             />
             </div>
-            <div>
-                <label className='addpuppy__label' htmlFor='name'>Birthdate:</label>
+            <div className='addpuppy__form'>
+                <label className='addpuppy__label' htmlFor='name'>Birthdate</label>
+                <br/>
                 <input
                 type='text'
                 className='addpuppy__input'

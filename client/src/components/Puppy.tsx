@@ -62,10 +62,11 @@ const Puppy: React.FC = () => {
             <div>
                 {currentPuppy ? (
                     <div className='editpuppy__container'>
-                        <h4 className='editpuppy__header'>Puppy</h4>
+                        <h4 className='editpuppy__header'>Edit Puppy</h4>
                         <form>
                             <div className='editpuppy__form'>
-                                <label className='editpuppy__label' htmlFor='breed'>Breed:</label>
+                                <label className='editpuppy__label' htmlFor='breed'>Breed</label>
+                                <br/>
                                 <input
                                 type='text'
                                 className='editpuppy__input'
@@ -75,8 +76,9 @@ const Puppy: React.FC = () => {
                                 onChange={handleInputChange}
                                 />
                             </div>
-                            <div className='form-group'>
-                                <label className='editpuppy__label' htmlFor='name'>Name:</label>
+                            <div className='editpuppy__form'>
+                                <label className='editpuppy__label' htmlFor='name'>Name</label>
+                                <br/>
                                 <input
                                 type='text'
                                 className='editpuppy__input'
@@ -87,8 +89,9 @@ const Puppy: React.FC = () => {
                                 />
                                 </div>
 
-                                <div className='form-group'>
-                                <label className='editpuppy__label' htmlFor='name'>Birthdate:</label>
+                                <div className='editpuppy__form'>
+                                <label className='editpuppy__label' htmlFor='name'>Birthdate</label>
+                                <br/>
                                 <input
                                 type='text'
                                 className='editpuppy__input'
