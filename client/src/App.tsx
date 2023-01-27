@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import AddPuppy from './components/AddPuppy';
 import Puppy from './components/Puppy';
 import PuppiesList from './components/PuppiesList';
@@ -10,8 +10,8 @@ const App: React.FC = () => {
   return (
     <div>
       <nav className='navbar'>
-      <h1 className='navbar__header'> Cute Puppies List </h1>
-      <div>
+      <h1 className='navbar__header'> Puppies World </h1>
+      <div className='navbar__container'>
         <li className='navbar__item'>
           <Link to={'/puppies'} className='navbar__link'>
             Puppy List
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     </div>
   </nav>
 
-  <div className='container'>
+  <div className='body__container'>
         <Routes>
           <Route path='/' element={<PuppiesList/>} />
           <Route path='/puppies' element={<PuppiesList/>} />

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$font-header: 'Karla';
+$font-body: 'Inconsolata';
+$primary-color: #2254F8;
+$secondary-color: #A7B8FF;
+$text-color: #131A27;
+$background-color: #EAEEFF;
+$warning-color: #D64C4C;
+$successful-color: #80D297;
+
+body {
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.navbar__header {
+    font-family: $font-header;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar__link {
+    color: $primary-color;
+    font-family: $font-header;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 24px;
+    border-color: $primary-color;
+    border-style: solid;
+    padding: 4px 8px;
+}
+
+
+@media (min-width: 320px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    .navbar__header {
+        text-align: center;
+        margin: 24px;
+    }
+
+    .navbar__container {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 16px 16px 16px;
+    }
+
+    .navbar__link {
+        text-decoration: none;
+    }
+
+    .body__container {
+        padding: 16px;
+        font-family: $font-body;
+        color: $text-color;
+    }
+}
