@@ -27,7 +27,8 @@
   "homepage": "https://github.com/appliedtechnology/addons-ts-lab-puppiesApi#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "serverless-http": "^3.1.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
