@@ -38,7 +38,7 @@ const PuppiesList: React.FC = () => {
                 puppies.map((puppy, index) => (
                     <li
                     className={
-                        'list-group-item' + (index === currentIndex ? 'active' : '')
+                        'puppylist__item' + (index === currentIndex ? 'active' : '')
                     }
                     onClick={() => setActivePuppy(puppy, index)}
                     key={index}
