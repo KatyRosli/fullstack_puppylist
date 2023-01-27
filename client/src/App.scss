@@ -97,6 +97,14 @@ li {
     color: $text-color;
 }
 
+footer {
+    text-align: center;
+    color: $text-color;
+    font-family: $font-body;
+    padding: 88px 0 88px 0;
+    font-size: 12px;
+}
+
 @media (min-width: 320px) {
     .navbar {
         padding: 16px;

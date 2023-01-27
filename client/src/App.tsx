@@ -32,7 +32,27 @@ const App: React.FC = () => {
           <Route path='/add' element={<AddPuppy/>} />
           <Route path='/puppies/:id' element={<Puppy/>} />
         </Routes>
-      </div>
+  </div>
+      <footer>
+        <a
+          href='https://github.com/KatyRosli/fullstack_puppylist'
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github"
+        >
+          Open sourced on Github{" "}
+        </a>
+        by
+        <a
+          href='https://www.katyrosli.com'
+          target="_blank"
+          rel="nopener noreferrer"
+          className="name"
+        >
+          {" "}
+          Katy Rosli
+        </a>
+      </footer>
     </div>
   );
 }
