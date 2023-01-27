@@ -63,50 +63,38 @@ li {
     display: none;
 }
 
-.btn__edit-delete, .btn__delete, .btn__update {
+@mixin theme($theme: Button) {
     cursor: pointer;
     border-radius: 24px;
-    border-color: $primary-color;
     border-style: solid;
     padding: 4px 8px;
     text-decoration: none;
-    color: $primary-color;
     margin-top: 24px;
     font-family: $font-header;
     font-weight: 700;
-    background-color: $background-color;
     font-size: 16px;
+}
+
+.btn__edit-delete, .btn__delete, .btn__update {
+    @include theme($theme: Button);
+    border-color: $primary-color;
+    background-color: $background-color;
+    color: $primary-color;
 }
 
 .btn__delete {
-    cursor: pointer;
-    border-radius: 24px;
-    border-color: $warning-color;
-    border-style: solid;
-    padding: 4px 8px;
-    text-decoration: none;
-    color: $text-color;
-    margin-top: 24px;
-    font-family: $font-header;
-    font-weight: 700;
+    @include theme($theme: Button);
     background-color: $warning-color;
-    font-size: 16px;
+    border-color: $warning-color;
     margin-right: 40px;
+    color: $text-color;
 }
 
 .btn__update, .btn__submit, .btn__addpuppy {
-    cursor: pointer;
-    border-radius: 24px;
+    @include theme($theme: Button);
     border-color: $successful-color;
-    border-style: solid;
-    padding: 4px 8px;
-    text-decoration: none;
-    color: $text-color;
-    margin-top: 24px;
-    font-family: $font-header;
-    font-weight: 700;
     background-color: $successful-color;
-    font-size: 16px;
+    color: $text-color;
 }
 
 @media (min-width: 320px) {
@@ -152,5 +140,17 @@ li {
         border-color: $text-color;
         height: 32px;
         padding: 1px 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 24px 0 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 0 176px 0 176px;
     }
 }
