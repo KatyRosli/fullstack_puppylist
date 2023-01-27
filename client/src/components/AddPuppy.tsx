@@ -43,7 +43,7 @@ const AddPuppy: React.FC = () => {
     };
 
     return (
-        <div className='submit-form'>
+        <div className='addpuppy__form'>
             {submitted ? (
                 <div>
                     <h4> You have submitted succesfully</h4>
@@ -53,34 +53,34 @@ const AddPuppy: React.FC = () => {
                 </div>
             ) : (
             <div>
-                <div className='form-group'>
-                    <p> Please fill in all of the inputs to add puppy data.</p>
-                    <label htmlFor='Breed'>Breed</label>
+                <div>
+                    <p className='addpuppy__instruction'> Please fill in all of the inputs to add puppy data.</p>
+                    <label className='addpuppy__label' htmlFor='Breed'>Breed:</label>
                     <input
                         type='text'
-                        className='form-control'
+                        className='addpuppy__input'
                         id='breed'
                         value={puppy.breed}
                         onChange={handleInputChange}
                         name='breed'
                     />
             </div>
-            <div className='form-group'>
-                <label htmlFor='name'>Name</label>
+            <div>
+                <label className='addpuppy__label' htmlFor='name'>Name:</label>
                 <input
                 type='text'
-                className='form-control'
+                className='addpuppy__input'
                 id='name'
                 value={puppy.name}
                 onChange={handleInputChange}
                 name='name'
             />
             </div>
-            <div className='form-group'>
-                <label htmlFor='name'>Birthdate</label>
+            <div>
+                <label className='addpuppy__label' htmlFor='name'>Birthdate:</label>
                 <input
                 type='text'
-                className='form-control'
+                className='addpuppy__input'
                 id='birthdate'
                 value={puppy.birthdate}
                 onChange={handleInputChange}
@@ -88,7 +88,7 @@ const AddPuppy: React.FC = () => {
             />
             </div>
 
-            <button onClick={savePuppy} className='btn btn-success'>
+            <button onClick={savePuppy} className='btn__submit'>
                 Submit
             </button>
             </div>

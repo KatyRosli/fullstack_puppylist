@@ -10,15 +10,15 @@ const App: React.FC = () => {
   return (
     <div>
       <nav className='navbar'>
-      <h1> Cute Puppies List </h1>
-      <div className='navbar-nav'>
-        <li className='nav-item'>
-          <Link to={'/puppies'} className='nav-link'>
+      <h1 className='navbar__header'> Cute Puppies List </h1>
+      <div>
+        <li className='navbar__item'>
+          <Link to={'/puppies'} className='navbar__link'>
             Puppy List
           </Link>
         </li>
-        <li className='nav-item'>
-            <Link to={'/add'} className='nav-link'>
+        <li className='navbar__item'>
+            <Link to={'/add'} className='navbar__link'>
               Add Puppy
             </Link>
         </li>

@@ -61,14 +61,14 @@ const Puppy: React.FC = () => {
         return(
             <div>
                 {currentPuppy ? (
-                    <div className='edit-form'>
-                        <h4>Puppy</h4>
+                    <div className='editpuppy__container'>
+                        <h4 className='editpuppy__header'>Puppy</h4>
                         <form>
-                            <div className='form-group'>
-                                <label htmlFor='breed'>Breed</label>
+                            <div className='editpuppy__form'>
+                                <label className='editpuppy__label' htmlFor='breed'>Breed:</label>
                                 <input
                                 type='text'
-                                className='form-control'
+                                className='editpuppy__input'
                                 id='breed'
                                 name='breed'
                                 value={currentPuppy.breed}
@@ -76,10 +76,10 @@ const Puppy: React.FC = () => {
                                 />
                             </div>
                             <div className='form-group'>
-                                <label htmlFor='name'>Name</label>
+                                <label className='editpuppy__label' htmlFor='name'>Name:</label>
                                 <input
                                 type='text'
-                                className='form-control'
+                                className='editpuppy__input'
                                 id='name'
                                 name='name'
                                 value={currentPuppy.name}
@@ -88,10 +88,10 @@ const Puppy: React.FC = () => {
                                 </div>
 
                                 <div className='form-group'>
-                                <label htmlFor='name'>Birthdate</label>
+                                <label className='editpuppy__label' htmlFor='name'>Birthdate:</label>
                                 <input
                                 type='text'
-                                className='form-control'
+                                className='editpuppy__input'
                                 id='name'
                                 name='birthdate'
                                 value={currentPuppy.birthdate}
@@ -99,23 +99,23 @@ const Puppy: React.FC = () => {
                                 />
                                 </div>
                                 </form>
-                                <button className='badge badge-danger' onClick={deletePuppy}>
+                                <button className='btn__delete' onClick={deletePuppy}>
                                     Delete
                                 </button>
 
                                 <button
                                 type='submit'
-                                className='badge badge-success'
+                                className='btn__update'
                                 onClick={updatePuppy}
                                 >
                                     Update
                                 </button>
-                                <p>{message}</p>
+                                <p className='editpuppy__update-message'>{message}</p>
                              </div>
                         ) :(
                             <div>
                                 <br />
-                                <p>Please click on a Puppy...</p>
+                                <p className='editepuppy__delete-message'>Please click on a Puppy...</p>
                             </div>
                         )}
                         </div>
