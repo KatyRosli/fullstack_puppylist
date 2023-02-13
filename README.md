@@ -1,6 +1,8 @@
 # Fullstack PuppyList :
 
-- A responsive...
+- A responsive fullstack PuppyList. Functions: Users can view & edit/delete individual list & add new Puppy information.
+
+![screenshot](./client/public/image1.jpg)
 
 # Built with 🛠️:
 FRONTEND:
